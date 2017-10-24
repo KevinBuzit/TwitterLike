@@ -1,0 +1,37 @@
+<!--
+  Generated template for the ContactsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Contacts</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-refresher (ionRefresh)="Refresh($event)">
+        <ion-refresher-content>
+            
+        </ion-refresher-content>
+      </ion-refresher> 
+
+      <ion-list>
+      <ion-list-header>
+        Contacts
+      </ion-list-header> 
+      <ion-item *ngFor="let utilisateur of utilisateurs">
+        <ion-img width="80" height="80" [src]="{{utilisateur.urlPhoto}}"></ion-img>
+        <ion-label>
+          {{utilisateur.username}}
+          </ion-label>
+          <ion-label>
+              {{utilisateur.date}}
+          </ion-label>
+      </ion-item>
+    </ion-list> 
+</ion-content>

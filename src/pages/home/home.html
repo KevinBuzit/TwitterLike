@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Twitter like !
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div align="center">
+    <input type="text" placeholder="Login" [(ngModel)]='login'/><br>
+    <input type="password" placeholder="Password" [(ngModel)]='pwd'/><br>
+    <input type="text" placeholder="URL Photo" [(ngModel)]='url'/><br>
+    <button ion-button (click)="logIn();" color="light">Log In !</button><br>
+    <button ion-button (click)="signUp();" color="light">Sign Up !</button>
+  </div>
+</ion-content>
